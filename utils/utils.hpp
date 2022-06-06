@@ -1,7 +1,7 @@
-#ifndef FT_CONTAINERS_UTILS_H
-#define FT_CONTAINERS_UTILS_H
-#include "../iterators/iterator_traits.h"
-#include "../iterators/random_access_iterator.h"
+#ifndef FT_CONTAINERS_UTILS_HPP
+#define FT_CONTAINERS_UTILS_HPP
+#include "../iterators/iterator_traits.hpp"
+#include "../iterators/random_access_iterator.hpp"
 
 namespace ft {
 
@@ -9,6 +9,7 @@ template<class InputIterator>
 typename ft::iterator_traits<InputIterator>::difference_type
 	distance (InputIterator first, InputIterator last)
 	{ return last - first; }
+
 
 template<class Vector>
 void print_vector(Vector vector)

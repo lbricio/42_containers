@@ -1,5 +1,5 @@
-#ifndef FT_CONTAINERS_PAIR_H
-#define FT_CONTAINERS_PAIR_H
+#ifndef FT_CONTAINERS_PAIR_HPP
+#define FT_CONTAINERS_PAIR_HPP
 
 namespace ft {
 

@@ -1,6 +1,6 @@
-#ifndef FT_CONTAINERS_REVERSE_ITERATOR_H
-#define FT_CONTAINERS_REVERSE_ITERATOR_H
-#include "iterator_traits.h"
+#ifndef FT_CONTAINERS_REVERSE_ITERATOR_HPP
+#define FT_CONTAINERS_REVERSE_ITERATOR_HPP
+#include "iterator_traits.hpp"
 
 namespace ft {
 

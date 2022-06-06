@@ -1,20 +1,20 @@
 #ifndef FT_CONTAINERS_STACK_H
 #define FT_CONTAINERS_STACK_H
-#include <deque>
+# include "vector.hpp"
 
 namespace ft {
 
-template <class T, class Container = std::deque<T> >
+template <class T, class Container = vector<T> >
 class stack {
 
 public:
-	typedef T				value_type;		// T type template
-	typedef Container		container_type; // type def (deque derivated)
+	typedef T				value_type;
+	typedef Container		container_type;
 	typedef size_t 			size_type;
 
 //************** Private attributes **************
 protected:
-	container_type 			_container;		// object def
+	container_type 			_container;
 
 //************** Public functions **************
 

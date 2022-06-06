@@ -2,10 +2,10 @@
 # define FT_CONTAINERS_VECTOR_H
 # include <iostream>
 # include <sstream>
-# include "../iterators/random_access_iterator.h"
-# include "../iterators/reverse_iterator.h"
-# include "../utils/type_traits.h"
-# include "../utils/utils.h"
+# include "../iterators/random_access_iterator.hpp"
+# include "../iterators/reverse_iterator.hpp"
+# include "../utils/type_traits.hpp"
+# include "../utils/utils.hpp"
 
 namespace ft {
 
@@ -276,21 +276,39 @@ public:
 		return iterator(begin() + n);
 	}
 
+
 	// fill
-	void insert (iterator position, size_type n, const value_type& val) {
-		size_type pos = position - begin();
-		if (_size + n > _capacity) {
-			if (n > _size)
-				reallocation(_size + n);
-			else
-				reallocation(_capacity * 2);
+   /* void insert (iterator position, size_type n, const value_type& val) {
+        size_type pos = position - begin();
+        if (_size + n > _capacity) {
+            if (n > _size)
+                reallocation(_size + n);
+            else
+                reallocation(_capacity * 2);
+        }
+
+        for (size_type i = _size - 1; i > pos + n - 1; i--)
+            _alloc.construct(&_array[i], _array[i - n]);
+        for (size_type i = pos; i < n; i++)
+            _alloc.construct(&_array[i], val);
+        _size += n;
+    }*/
+
+		void insert(iterator position, size_type n, const value_type &val) {
+			vector<T> tmp(*this);
+        	size_type i = position - begin();
+			if (_size + n > _capacity) {
+				if (n > _size)
+					reallocation(_size + n);
+				else
+					reallocation(_capacity * 2);
+			}
+			for (size_type j = i; j < i + n; ++j)
+				_alloc.construct(&_array[j], val);
+			for (size_type j = i + n; j < _size + n; ++j)
+				_alloc.construct(&_array[j], tmp[j - n]);
+			_size += n;
 		}
-		_size += n;
-		for (size_type i = _size - 1; i > pos + n - 1; i--)
-			_alloc.construct(&_array[i], _array[i - n]);
-		for (size_type i = pos; i < n; i++)
-			_alloc.construct(&_array[i], val);
-	}
 
 	// range
 	template <class InputIterator>
@@ -394,4 +412,4 @@ public:
 	void swap (vector<T,Alloc>& x, vector<T,Alloc>& y) { x.swap(y); }
 }
 
-#endif //FT_CONTAINERS_VECTOR_H
+#endif

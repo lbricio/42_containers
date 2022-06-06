@@ -1,12 +1,12 @@
 #ifndef FT_CONTAINERS_MAP_H
 #define FT_CONTAINERS_MAP_H
 #include <memory>
-#include "../utils/pair.h"
-#include "../utils/BSTNode.h"
-#include "../iterators/bidirectional_iterator.h"
-#include "../iterators/reverse_iterator.h"
-#include "../utils/type_traits.h"
-#include "../utils/utils.h"
+#include "../utils/pair.hpp"
+#include "../utils/BSTNode.hpp"
+#include "../iterators/bidirectional_iterator.hpp"
+#include "../iterators/reverse_iterator.hpp"
+#include "../utils/type_traits.hpp"
+#include "../utils/utils.hpp"
 
 namespace ft {
 

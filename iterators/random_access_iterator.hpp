@@ -1,6 +1,6 @@
-#ifndef RANDOM_ACCESS_ITERATOR_H
-#define RANDOM_ACCESS_ITERATOR_H
-#include "iterator_traits.h"
+#ifndef RANDOM_ACCESS_ITERATOR_HPP
+#define RANDOM_ACCESS_ITERATOR_HPP
+#include "iterator_traits.hpp"
 
 namespace ft {
 

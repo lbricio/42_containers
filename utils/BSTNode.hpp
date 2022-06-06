@@ -1,5 +1,5 @@
-#ifndef FT_CONTAINERS_BSTNODE_H
-#define FT_CONTAINERS_BSTNODE_H
+#ifndef FT_CONTAINERS_BSTNODE_HPP
+#define FT_CONTAINERS_BSTNODE_HPP
 
 #include <iostream>
 
@@ -99,4 +99,4 @@ struct BSTNode {
 
 }
 
-#endif //FT_CONTAINERS_BSTNODE_H
+#endif

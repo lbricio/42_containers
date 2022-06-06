@@ -8,9 +8,9 @@
 	#include <map>
 	namespace ft = std;
 #else
-	#include "../containers/vector.h"
-	#include "../containers/map.h"
-	#include "../containers/stack.h"
+	#include "../containers/vector.hpp"
+	#include "../containers/map.hpp"
+	#include "../containers/stack.hpp"
 #endif
 
 // helper function
@@ -211,7 +211,6 @@ void map_element_access()
 {
 	map_brackets_1();
 }
-
 
 void map_insert_1()
 {
@@ -626,9 +625,8 @@ void vector_test_modifier() {
 
 	ft::vector<int>::iterator begin_new = new_vector.begin();
 	new_vector.insert(begin_new + 3, 3, -222);
-
+	std::cout << "error is here? " << std::endl;
 	print_vector(new_vector);
-
 	std::cout << "vector size: " << new_vector.size() << std::endl;
 	std::cout << "vector capacity: " << new_vector.capacity() << std::endl;
 
@@ -836,7 +834,7 @@ void map_tester() {
 }
 
 int main(void)
-{
+{	
 	vector_tester();
 	stack_tester();
 	map_tester();
