@@ -6,7 +6,7 @@
 #    By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/04 00:33:16 by lbricio-          #+#    #+#              #
-#    Updated: 2022/06/04 00:33:17 by lbricio-         ###   ########.fr        #
+#    Updated: 2022/06/05 23:32:17 by lbricio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ PROGRAM_FT		= 	ft
 
 SOURCE			= 	tests/tests.cpp
 OBJECT			=	$(SOURCE:.cpp=.o)
-OUTPUT_FILES    =   tests/ft_output.txt tests/std_output.txt
+OUTPUT_FILES	=   tests/ft_output.txt tests/std_output.txt
 
-COMPILE			= 	clang++
+COMPILE			= 	c++
 
 FLAGS_STD		= 	-Wall -Wextra -Werror -std=c++98 -fsanitize=address -D STD_OPTION=1
 FLAGS_FT		= 	-Wall -Wextra -Werror -std=c++98 -fsanitize=address -D STD_OPTION=0
