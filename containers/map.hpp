@@ -43,7 +43,7 @@ private:
 	map_node 		*_begin;
 	map_node 		*_end;
 	size_type 		_size;
-	key_compare 	_compare;
+	key_compare 		_compare;
 	alloc_node 		_alloc;
 
 //************************ value_compare ************************
